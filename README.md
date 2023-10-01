@@ -28,16 +28,15 @@ Un proyecto de API para administrar tareas.
 
 Para empezar, clona este repositorio y sigue estos pasos:
 
-```bash
 # Clona el repositorio
+```bash
 git clone https://github.com/tu-usuario/tareas-api.git
-
+```
 # Entra al directorio del proyecto
 cd tareas-api
 
 # Instala las dependencias
-npm install
-
+npm install  
 
 ## Uso
 
@@ -74,3 +73,4 @@ Puedes ejecutar las pruebas unitarias para asegurarte de que la API funcione cor
 
 ```bash
 npm test
+```
