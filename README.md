@@ -1,6 +1,6 @@
 # Tareas API
 
-Un proyecto de API para administrar tareas.
+Un proyecto de API para administrar tareas. -LUNA SORIA MATIAS KALED-
 
 ## Tabla de Contenidos
 
