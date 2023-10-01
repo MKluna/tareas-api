@@ -6,7 +6,7 @@ const obtenerTodasLasTareas = (req, res) => {
       // Devuelve todas las tareas en el array
       res.json(tareas);
     } catch (error) {
-      // Manejo de errores
+      
       res.status(500).json({ mensaje: 'Error al obtener las tareas' });
     }
   };
@@ -18,7 +18,6 @@ const obtenerTodasLasTareas = (req, res) => {
     if (tarea) {
       res.json(tarea);
     } else {
-      // Manejo de errores si la tarea no se encuentra
       res.status(404).json({ mensaje: 'Tarea no encontrada' });
     }
   };
@@ -35,9 +34,8 @@ const obtenerTodasLasTareas = (req, res) => {
         completada: false,
       };
       tareas.push(nuevaTarea);
-      res.status(201).json(nuevaTarea); // 201 Created
+      res.status(201).json(nuevaTarea);
     } catch (error) {
-      // Manejo de errores
       res.status(500).json({ mensaje: 'Error al crear una tarea' });
     }
   };
@@ -57,11 +55,10 @@ const obtenerTodasLasTareas = (req, res) => {
         };
         res.json(tareas[tareaIndex]);
       } else {
-        // Manejo de errores si la tarea no se encuentra
         res.status(404).json({ mensaje: 'Tarea no encontrada' });
       }
     } catch (error) {
-      // Manejo de errores
+      
       res.status(500).json({ mensaje: 'Error al actualizar una tarea' });
     }
   };
@@ -74,7 +71,7 @@ const obtenerTodasLasTareas = (req, res) => {
       res.json({ mensaje: 'Tarea eliminada' });
     } catch (error) {
       console.log("🚀 ~ file: tareasController.js:76 ~ eliminarTarea ~ error:", error);
-      // Manejo de errores
+      
       res.status(500).json({ mensaje: 'Error al eliminar una tarea' });
     }
   };

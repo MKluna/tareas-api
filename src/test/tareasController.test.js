@@ -1,6 +1,6 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const app = require("../../index"); // Importa tu aplicación Express
+const app = require("../../index");
 
 const { expect } = chai;
 chai.use(chaiHttp);
@@ -19,7 +19,7 @@ describe("Pruebas para el controlador de tareas", () => {
       .post("/api/tareas") 
       .send(nuevaTarea);
 
-    expect(res).to.have.status(201); // 201 Created
+    expect(res).to.have.status(201);
     expect(res.body).to.include({ nombre: "Tarea de prueba" });
   });
 
@@ -28,7 +28,7 @@ describe("Pruebas para el controlador de tareas", () => {
       .request(app) 
       .get("/api/tareas"); 
 
-    expect(res).to.have.status(200); // 200 OK
+    expect(res).to.have.status(200); 
     expect(res.body).to.be.an("array");
   });
 
@@ -48,7 +48,7 @@ describe("Pruebas para el controlador de tareas", () => {
       .request(app) 
       .get(`/api/tareas/${tareaCreada.id}`); 
 
-    expect(obtenerRes).to.have.status(200); // 200 OK
+    expect(obtenerRes).to.have.status(200); 
     expect(obtenerRes.body).to.include({ id: tareaCreada.id });
   });
 
@@ -72,7 +72,7 @@ describe("Pruebas para el controlador de tareas", () => {
         descripcion: "Descripción actualizada",
       });
 
-    expect(actualizarRes).to.have.status(200); // 200 OK
+    expect(actualizarRes).to.have.status(200);
     expect(actualizarRes.body).to.include({
       nombre: "Tarea actualizada",
       descripcion: "Descripción actualizada",
@@ -95,7 +95,7 @@ describe("Pruebas para el controlador de tareas", () => {
       .request(app) 
       .delete(`/api/tareas/${tareaCreada.id}`); 
 
-    expect(eliminarRes).to.have.status(200); // 200 OK
+    expect(eliminarRes).to.have.status(200); 
     expect(eliminarRes.body).to.include({ mensaje: "Tarea eliminada" });
   });
 });

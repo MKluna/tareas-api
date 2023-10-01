@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const tareasController = require("../controllers/tareasController");
 
-// Rutas para tareas
+
 router.get("/tareas", tareasController.obtenerTodasLasTareas);
 router.get("/tareas/:id", tareasController.obtenerTareaPorId);
 router.post("/tareas", tareasController.crearTarea);
