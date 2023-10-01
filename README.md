@@ -9,8 +9,6 @@ Un proyecto de API para administrar tareas.
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Ejecución de Pruebas](#ejecución-de-pruebas)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Descripción
 
